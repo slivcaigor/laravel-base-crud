@@ -13,11 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('santi', function (Blueprint $table) {
+        Schema::create('santos', function (Blueprint $table) {
             $table->id();
-
             $table->string('nome', 32);
-            $table->string('luogoNascita', 20);
+            $table->string('luogoNascita', 21);
             $table->date('dataBenedizione');
             $table->integer('numeroMiracoli') -> unsigned();
             $table->timestamps();
@@ -31,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('santi');
+        Schema::dropIfExists('santos');
     }
 };
