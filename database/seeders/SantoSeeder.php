@@ -14,6 +14,6 @@ class SantoSeeder extends Seeder
      */
     public function run()
     {
-       Santo::factory() -> count(100) -> create();
+        $santi = Santo::factory() -> count(100) -> create();
     }
 }
