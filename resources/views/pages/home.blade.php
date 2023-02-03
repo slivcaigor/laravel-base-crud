@@ -6,7 +6,15 @@
     <ul>
         @foreach ($santi as $santo)
             <li>
-                {{ $santo -> nome }} - {{ $santo -> numeroMiracoli }}
+                <a href="{{route('santo.show', ['id' => $santo -> id])}}">
+                    {{ $santo -> nome }} - {{ $santo -> numeroMiracoli }}
+                </a>
+
+                <a href="{{route('santo.destroy', ['id' => $santo -> id])}}">
+                    X
+                </a>
+
+  
             </li>
         @endforeach
     </ul>

@@ -11,12 +11,21 @@ class MainController extends Controller
     
     public function home() {
 
-        $santi = Santo::orderBy('id') -> get();
+        $santi = Santo::orderBy('created_at', 'DESC') -> get();
 
+        // $data = [
+        //     'santi' => $santi
+        // ];
+
+        return view('pages.home', compact('santi'));
+    }
+
+    public function santoShow() {
+
+        $santi = Santo::find($id);
         $data = [
-            'santi' => $santi
+            'santo' => $santo
         ];
-
-        return view('pages.home', $data);
+        return view('pages.santoShow', $data);
     }
 }
