@@ -20,12 +20,20 @@ class MainController extends Controller
         return view('pages.home', compact('santi'));
     }
 
-    public function santoShow() {
+    public function santoShow($id) {
 
         $santi = Santo::find($id);
         $data = [
             'santo' => $santo
         ];
         return view('pages.santoShow', $data);
+    }
+
+    public function santoDestroy($id) {
+
+        $santo = Santo::find($id);
+        $santo -> delete();
+      
+        return redirect() -> route('home');
     }
 }
