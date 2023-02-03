@@ -24,7 +24,7 @@ class MainController extends Controller
 
         $santi = Santo::find($id);
         $data = [
-            'santo' => $santo
+            'santo' => $santi
         ];
         return view('pages.santoShow', $data);
     }
