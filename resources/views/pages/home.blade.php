@@ -3,6 +3,9 @@
 @section('content')
 
     <h1>Santi</h1>
+
+    <a href="{{ route('santo.create') }}">Aggiungi Nuovo Santo</a>
+
     <ul>
         @foreach ($santi as $santo)
             <li>

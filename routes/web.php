@@ -21,4 +21,4 @@ Route::get('/santo/destroy/{id}', [MainController::class, 'santoDestroy']) -> na
 
 Route::get('/santo/create', [MainController::class, 'santoCreate']) -> name('santo.create');
 
-Route::get('/santo/store', [MainController::class, 'santoStore']) -> name('santo.store');
+Route::post('/santo/store', [MainController::class, 'santoStore']) -> name('santo.store');
